@@ -1,0 +1,83 @@
+.detail-page-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(27, 27, 27);
+  gap: 10px;
+  padding: 10px;
+}
+
+.detail-container {
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.name-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.name-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.name-logo-container h1 {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 22px;
+}
+
+.detail-page-image {
+  width: 380px;
+  border-radius: 5px;
+}
+
+.overview-container {
+  color: #fff;
+  font-family: Roboto;
+}
+
+.runtime {
+  border: 1px solid #fff;
+  padding: 4px;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.rating-genres {
+  color: #7c8df0;
+}
+
+.release-date {
+  color: #fff;
+}
+
+.cast-heading {
+  color: #fff;
+  font-family: Roboto;
+}
+
+.cast-list-container {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin: 8px;
+}
+
+@media (max-width: 767px) {
+  .detail-container {
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+  }
+}

@@ -1,70 +1,141 @@
-# Getting Started with Create React App
+The objective of the Movies DB web application is to provide users with an engaging and intuitive platform to explore and discover a wide range of movies. This application offers a comprehensive list of popular, top-rated, and upcoming movies. Users can view detailed information about each movie, including descriptions, ratings, and release dates. Additionally, the app features a robust search functionality that allows users to easily find specific movies based on their preferences. The goal is to create a seamless and enjoyable movie browsing experience leveraging the power and flexibility of React JS.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Refer to the image below:
 
-## Available Scripts
+<div style="text-align: center;">
+     <img src="./public/images/largeView.png" alt="ui"> 
+</div>
+<br/>
 
-In the project directory, you can run:
+### Design Files
 
-### `npm start`
+<details>
+<summary>popular</summary>
+<br/>
+Add the design files according to the route (if any) and responsiveness
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+[Extra Small (Size < 576px) and Small (Size >= 576px)](./public/images/mobileView.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px)](./public/images/largeView.png)
 
-### `npm test`
+</details>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Set Up Instructions
 
-### `npm run build`
+<details>
+<summary>Click to view</summary>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Download dependencies by running `npm install`
+- Start up the app using `npm start`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+</details>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Assignment Completion Instructions
 
-### `npm run eject`
+<details>
+<summary>Functionality added</summary>
+<br/>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The app must have the following functionalities:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Navigate through pages with use of react router dom.
+- Popular Movie Page
+- Top Rated Movie Page
+- Upcoming Movie Page
+- Search Functionality
+- Responsiveness
+- Pagination
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+</details>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Assignment Completion Checklist
 
-## Learn More
+<details>
+<summary>Click to view</summary>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- The completion Checklist includes the below-mentioned points
+  - I have completed all the functionalities asked in the assignment
+  - I have used only the resources (Frameworks, Design files, APIs, third-party packages) mentioned in the assignment
+  - I have modified the README.md file based on my assignment instructions
+  - I have completed the assignment On Time.
+  </details>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Quick Tips
 
-### Code Splitting
+<details>
+<summary>Click to view</summary>
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- I have used axios a third party Pakage for fetching data from a api
+- date-fns third party pakages for formatting the date
+</details>
 
-### Analyzing the Bundle Size
+### Important Note
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<details>
+<summary>Click to view</summary>
+<br/>
 
-### Making a Progressive Web App
+- Search Functionality doesn't work in MovieDetailPage route
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+</details>
 
-### Advanced Configuration
+### Resources
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<details>
+<summary>Data Fetch URLs</summary>
+<br/>
 
-### Deployment
+- API KEY
+  -c45a857c193f6302f2b5061c3b85e743
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+-Get all movies -https://api.themoviedb.org/3/movie/popular?api_key=${Api_key}&language=en-US&page=1
 
-### `npm run build` fails to minify
+-Get movie detail
+https://api.themoviedb.org/3/movie/${movie_id}?api_key=${Api_key}&language=en-US
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-Get movie cast detail
+https://api.themoviedb.org/3/movie/${movie_id}/credits?api_key=${Api_key}&language=en-US
+
+-Get upcoming movies
+https://api.themoviedb.org/3/movie/upcoming?api_key=${Api_key}&language=en-US&page=1
+
+-Get top-rated movies
+https://api.themoviedb.org/3/movie/top_rated?api_key=${Api_key}&language=en-US&page=1
+
+-Get search result
+https://api.themoviedb.org/3/search/movie?api_key=${Api_key}&language=en-US&query=${mov
+ie_name}&page=1
+
+</details>
+
+<details>
+<summary>Image URLs</summary>
+<br/>
+
+- For Image Path:- base domain used given below
+  https://image.tmdb.org/t/p/w500
+
+</details>
+
+<details>
+<summary>Colors</summary>
+- text-colors
+    #fffff
+    #00000
+
+- background-color
+  #464343
+  rgb(27, 27, 27)
+  <br/>
+
+Add the text and background colours to be used in the assignment yourself.
+
+</details>
+
+<details>
+<summary>Font-families</summary>
+
+- Roboto
+
+</details>

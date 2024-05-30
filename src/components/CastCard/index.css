@@ -1,0 +1,13 @@
+.cast-card-item-container {
+  color: #fff;
+  font-family: Roboto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cast-profile-image {
+  width: 180px;
+}

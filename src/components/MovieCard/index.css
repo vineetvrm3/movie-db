@@ -1,0 +1,16 @@
+.movie-card-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.movie-card-container p {
+  color: #fff;
+}
+
+.card-image {
+  width: 150px;
+  height: 200px;
+}
