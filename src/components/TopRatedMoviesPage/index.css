@@ -1,0 +1,40 @@
+.popular-movie-container {
+  background-color: rgb(27, 27, 27);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  overflow: auto;
+  padding: 10px;
+}
+
+.movies-card-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  gap: 24px;
+}
+
+.page-container {
+  background-color: rgb(27, 27, 27);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.page-container p {
+  color: #fff;
+}
+
+@media (max-width: 767px) {
+  .page-container {
+    background-color: rgb(27, 27, 27);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+}

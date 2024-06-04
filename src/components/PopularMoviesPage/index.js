@@ -60,25 +60,9 @@ const PopularMoviesPage = () => {
     }
   };
 
-  const getSearchResults = () => {
-    const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${searchInput}&page=${currentPage}`;
-    axios
-      .get(url)
-      .then((res) => setPopularMovies(res.data))
-      .then((error) => {
-        if (error) {
-          setError(error.message);
-        }
-      });
-  };
-
   return (
     <>
-      <Navbar
-        setSearchInput={setSearchInput}
-        searchInput={searchInput}
-        getSearchResults={getSearchResults}
-      />
+      <Navbar setSearchInput={setSearchInput} searchInput={searchInput} />
       <div className="popular-movie-container">{finalRender()}</div>
       <div className="page-container">
         <button

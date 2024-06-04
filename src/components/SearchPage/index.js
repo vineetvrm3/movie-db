@@ -3,6 +3,7 @@ import Navbar from "../Navbar";
 import axios from "axios";
 import { TailSpin } from "react-loader-spinner";
 import MovieCard from "../MovieCard";
+import { useParams } from "react-router-dom";
 import "./index.css";
 
 const apiConstants = {
@@ -11,22 +12,24 @@ const apiConstants = {
   failed: "FAILED",
 };
 
-const PopularMoviesPage = () => {
-  const [upcomingMovies, setPopularMovies] = useState([]);
+const SearchPage = () => {
+  const params = useParams();
+  const { search } = params;
+  const [searchedList, setSearchedList] = useState([]);
   const [error, setError] = useState(null);
   const [apiStatus, setApiStatus] = useState(apiConstants.loading);
   const [currentPage, setCurrentPages] = useState(1);
   const [userPageInput, setUserPageInput] = useState(null);
   const [searchInput, setSearchInput] = useState("");
+
   const apiKey = "c45a857c193f6302f2b5061c3b85e743";
 
   useEffect(() => {
-    setApiStatus(apiConstants.loading);
-    const url = `https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}&language=en-US&page=${currentPage}`;
+    const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${search}&page=${currentPage}`;
     axios
       .get(url)
       .then((res) => {
-        setPopularMovies(res.data);
+        setSearchedList(res.data);
         setApiStatus(apiConstants.success);
       })
       .then((error) => {
@@ -35,12 +38,12 @@ const PopularMoviesPage = () => {
           setApiStatus(apiConstants.failed);
         }
       });
-  }, [currentPage]);
+  }, [currentPage, search]);
 
   const getMoviesCard = () => {
     return (
       <ul className="movies-card-container">
-        {upcomingMovies.results.map((each) => (
+        {searchedList.results.map((each) => (
           <MovieCard key={each.id} item={each} />
         ))}
       </ul>
@@ -75,10 +78,10 @@ const PopularMoviesPage = () => {
         >
           Previous
         </button>
-        <p>{`${currentPage} / ${upcomingMovies.total_pages}`}</p>
+        <p>{`${currentPage} / ${searchedList.total_pages}`}</p>
         <button
           onClick={() => {
-            if (currentPage < upcomingMovies.total_pages) {
+            if (currentPage < searchedList.total_pages) {
               setCurrentPages((prev) => prev + 1);
             }
           }}
@@ -105,4 +108,4 @@ const PopularMoviesPage = () => {
   );
 };
 
-export default PopularMoviesPage;
+export default SearchPage;

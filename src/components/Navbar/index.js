@@ -29,10 +29,11 @@ const Navbar = ({ setSearchInput, searchInput, getSearchResults }) => {
               setSearchInput(e.target.value);
             }}
           />
-
-          <button className="search-button" onClick={getSearchResults}>
-            Search
-          </button>
+          <Link to={`/search-page/:${searchInput}`}>
+            <button className="search-button" onClick={getSearchResults}>
+              Search
+            </button>
+          </Link>
         </div>
       </div>
     </nav>

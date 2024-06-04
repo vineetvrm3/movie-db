@@ -19,6 +19,24 @@ Add the design files according to the route (if any) and responsiveness
 - [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px)](./public/images/largeView.png)
 
 </details>
+<summary>Top Rated</summary>
+<br/>
+Add the design files according to the route (if any) and responsiveness
+
+[Extra Small (Size < 576px) and Small (Size >= 576px)](./public/images/mobileView.png)
+
+- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px)](./public/images/largeView.png)
+
+</details>
+<summary>Upcoming</summary>
+<br/>
+Add the design files according to the route (if any) and responsiveness
+
+[Extra Small (Size < 576px) and Small (Size >= 576px)](./public/images/mobileView.png)
+
+- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px)](./public/images/largeView.png)
+
+</details>
 
 ### Set Up Instructions
 
@@ -67,17 +85,6 @@ The app must have the following functionalities:
 <br>
 
 - I have used axios a third party Pakage for fetching data from a api
-- date-fns third party pakages for formatting the date
-</details>
-
-### Important Note
-
-<details>
-<summary>Click to view</summary>
-<br/>
-
-- Search Functionality doesn't work in MovieDetailPage route
-
 </details>
 
 ### Resources
@@ -125,12 +132,9 @@ ie_name}&page=1
     #00000
 
 - background-color
-  #464343
-  rgb(27, 27, 27)
-  <br/>
-
-Add the text and background colours to be used in the assignment yourself.
-
+#464343
+rgb(27, 27, 27)
+<br/>
 </details>
 
 <details>
